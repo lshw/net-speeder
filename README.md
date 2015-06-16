@@ -42,4 +42,5 @@ Linux Cooked interface使用编译（venetX，OpenVZ）： sh build.sh -DCOOKED 
 
 参数：./net_speeder 网卡名 加速规则（bpf规则）
 
-最简单用法： # ./net_speeder venet0 "ip" 加速所有ip协议数据 
+最简单用法： # ./net_speeder venet0 "ip" 加速所有ip协议数据   
+加速某些端口：#./net_speeder eth1 "src 58.246.1.12 and (port 1723 or port 22 or port 10000)"  加速本机ip58.246.1.2发出的包 并端口是 1723,22,10000的流量

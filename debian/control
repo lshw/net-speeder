@@ -1,0 +1,15 @@
+Source: net-speeder
+Section: net
+Priority: optional
+Maintainer: liu shiwei <liushiwei@gmail.com>
+Build-Depends: debhelper (>= 9),libnet1-dev,libpcap0.8-dev
+Standards-Version: 3.9.5
+Homepage: https://github.org/lshw/net-speeder
+Vcs-Git: git://github.org/lshw/net-speeder
+
+Package: net-speeder
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},libnet1,libpcap0.8
+Description: A program to speed up single thread download upon long delay and unstable network
+
+

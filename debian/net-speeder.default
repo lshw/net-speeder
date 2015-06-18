@@ -1,0 +1,27 @@
+# Defaults for net-speeder initscript
+# sourced by /etc/init.d/net-speeder
+# installed at /etc/default/net-speeder by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+RUN_DAEMON="false"
+
+# 挂载在哪个网卡
+# 物理网卡，kvm虚拟机
+INTERFACE=eth0
+# openvz网卡
+#INTERFACE=venet0
+
+
+
+# 哪些流要量进行加速
+#源ip 192.168.1.1 并且 端口是(22,1723,10000) 
+FILTER="src 192.168.1.1 and (port 22 or port 1723 or port 10000)" 
+#所有ip流量
+#FILTER="ip"
+#所有udp和ping
+#FILTER="udp or ping"
+
+ 
